@@ -72,7 +72,7 @@ public class TestKill {
     public Redisson redisson(){
         Config config = new Config();
         //使用单个redis服务器
-        config.useSingleServer().setAddress("redis://121.4.196.77:6379").setPassword("JIjun@666").setDatabase(0);
+        config.useSingleServer().setAddress("redis://121.4.196.77:6379").setPassword("JIjun@666").setDatabase(0).setPingConnectionInterval(1000);
         //使用redis集群
         //config.useClusterServers().setScanInterval(2000).addNodeAddress("redis://192.168.31.151:6379","redis://192.168.31.152","redis://192.168.31.153");
         return (Redisson)Redisson.create(config);
