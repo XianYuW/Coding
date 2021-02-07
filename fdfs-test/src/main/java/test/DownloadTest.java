@@ -1,11 +1,9 @@
 package test;
 
-import org.csource.common.MyException;
 import org.csource.fastdfs.*;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.UUID;
 
 /**
@@ -25,10 +23,9 @@ public class DownloadTest {
             //定义storage客户端
             StorageClient1 client = new StorageClient1(trackerServer, storageServer);
 
-            //获取文件--获取到的是字节流的形式
-            byte[] bytes = client.download_file1("group1/M00/00/00/rBEAB2AfiliAY34CAA069dAWjDw615.png");
-            //将字节流转化为文件保存
-            File file;
+            //获取文件--获取到的是字节流的形式group1/M00/00/00/rBEAB2AfoT-AfVEBAA069dAWjDw236.png
+            byte[] bytes = client.download_file1("group1/M00/00/00/rBEAB2AfoT-AfVEBAA069dAWjDw236.png");
+            //将字节流转化为文件保存group1/M00/00/00/rBEAB2AfjL2AI1VaACxu-ZPNvX0638.png
             FileOutputStream outputStream = new FileOutputStream(new File("F:\\temp\\"+ UUID.randomUUID()+".png"));
             outputStream.write(bytes);
             outputStream.close();

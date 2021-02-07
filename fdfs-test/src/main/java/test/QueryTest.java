@@ -24,7 +24,7 @@ public class QueryTest {
             StorageServer server = null;
             //定义storage客户端
             StorageClient1 client = new StorageClient1(trackerServer,server);
-            FileInfo fileInfo = client.query_file_info1("group1/M00/00/00/rBEAB2AfjL2AI1VaACxu-ZPNvX0638.png");
+            FileInfo fileInfo = client.query_file_info1("group1/M00/00/00/rBEAB2AfoT-AfVEBAA069dAWjDw236.png");
             if(fileInfo != null){
                 System.out.println("fileInfo = " + fileInfo);
 
